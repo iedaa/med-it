@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Font?>
+
+<Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medit.HelloController">
+   <children>
+      <ImageView fitHeight="642.0" fitWidth="716.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/background.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="searchButton" fitHeight="53.0" fitWidth="16.0" layoutX="55.0" layoutY="152.0" onMouseClicked="#onSearchMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/search.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TextField fx:id="searchArea" layoutX="71.0" layoutY="147.0" prefHeight="25.0" prefWidth="146.0" />
+      <Label layoutX="47.0" layoutY="115.0" prefHeight="23.0" prefWidth="188.0" text="Pesquise por um remédio" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+   <stylesheets>
+      <URL value="@sheet.css" />
+   </stylesheets>
+</Group>

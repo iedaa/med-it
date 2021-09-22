@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medit.HelloController">
+   <children>
+      <ImageView fitHeight="642.0" fitWidth="716.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/login-form.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="usernameField" layoutX="269.0" layoutY="235.0" prefHeight="25.0" prefWidth="194.0" />
+      <ImageView fitHeight="36.0" fitWidth="215.0" layoutX="251.0" layoutY="361.0" onMouseClicked="#authenticateClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/authenticate.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <PasswordField fx:id="passField" layoutX="269.0" layoutY="290.0" prefHeight="25.0" prefWidth="193.0" />
+   </children>
+   <stylesheets>
+      <URL value="@sheet.css" />
+   </stylesheets>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</Group>

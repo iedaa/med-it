@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medit.HelloController">
+   <children>
+      <Label prefHeight="642.0" prefWidth="716.0" />
+      <ImageView fitHeight="236.0" fitWidth="460.0" layoutX="131.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/splash.png" />
+         </image>
+      </ImageView>
+   </children>
+   <stylesheets>
+      <URL value="@splash.css" />
+   </stylesheets>
+   <cursor>
+      <Cursor fx:constant="WAIT" />
+   </cursor>
+</Group>
