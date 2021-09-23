@@ -14,20 +14,12 @@
    <children>
       <ImageView fitHeight="642.0" fitWidth="716.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../images/login-form.png" />
+            <Image url="@../../../images/signup-form.png" />
          </image>
       </ImageView>
-      <TextField fx:id="usernameField" layoutX="269.0" layoutY="235.0" prefHeight="25.0" prefWidth="194.0" />
-      <ImageView fitHeight="36.0" fitWidth="215.0" layoutX="251.0" layoutY="361.0" onMouseClicked="#authenticateClick" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/authenticate.png" />
-         </image>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </ImageView>
-      <PasswordField fx:id="passField" layoutX="269.0" layoutY="290.0" prefHeight="25.0" prefWidth="193.0" />
-      <Label layoutX="321.0" layoutY="571.0" onMouseClicked="#signUpOnMouseClicked" text="Sign Up" textFill="#11a2f5">
+      <TextField fx:id="signUpUsernameField" layoutX="269.0" layoutY="235.0" prefHeight="25.0" prefWidth="194.0" />
+      <PasswordField fx:id="signUpPassField" layoutX="269.0" layoutY="290.0" prefHeight="25.0" prefWidth="193.0" />
+      <Label layoutX="321.0" layoutY="571.0" onMouseClicked="#signInOnMouseClicked" text="Sign In" textFill="#11a2f5">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -35,14 +27,15 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="372.0" layoutY="323.0" prefHeight="13.0" prefWidth="94.0" text="Forgot your password?">
-         <font>
-            <Font size="9.0" />
-         </font>
+      <TextField fx:id="signUpEmailField" layoutX="269.0" layoutY="348.0" prefHeight="25.0" prefWidth="194.0" />
+      <ImageView fitHeight="38.0" fitWidth="216.0" layoutX="247.0" layoutY="430.0" onMouseClicked="#createAccountOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/join-now.png" />
+         </image>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
-      </Label>
+      </ImageView>
    </children>
    <stylesheets>
       <URL value="@sheet.css" />
