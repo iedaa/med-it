@@ -6,6 +6,8 @@ module com.example.medit {
     requires javafx.graphics;
     requires java.sql;
     requires mail;
+    requires java.desktop;
+    requires javafx.swing;
 
     opens com.example.medit to javafx.fxml;
     exports com.example.medit;

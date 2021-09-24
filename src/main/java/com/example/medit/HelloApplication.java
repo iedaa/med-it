@@ -1,13 +1,18 @@
 package com.example.medit;
 
 import javafx.application.Application;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -55,6 +60,7 @@ public class HelloApplication extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(filename));
         Scene scene = new Scene(fxmlLoader.load(), 716, 642);
+
         stage.setTitle("Med It!");
         stage.setScene(scene);
         stage.show();
@@ -72,6 +78,18 @@ public class HelloApplication extends Application {
 
     };
 
+    public Image createImage(String address) throws IOException{
+
+        URL teste = getClass().getResource(address);
+
+        BufferedImage image = ImageIO.read(teste);
+
+        Image newImage = SwingFXUtils.toFXImage(image, null);
+
+        return newImage;
+
+    }
+
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -84,30 +102,7 @@ public class HelloApplication extends Application {
 
             System.out.println("Errinho:\n" +e);
 
-        } finally {
-
-
-            /*
-            String searchable = "comprimido";
-
-            ResultSet resultado = getConexao().createStatement().executeQuery("select dname from drug where dname like '%"+searchable+"%' order by dname;");
-
-            while (resultado.next()){
-                System.out.println(resultado.getString("dname"));
-            }
-
-            resultado = getConexao().createStatement().executeQuery("select * from users;");
-
-            while(resultado.next()){
-                System.out.println(resultado.getString("realname"));
-            }
-
-             */
-
-
-
-        }
-
+        } finally { }
 
         launch();
 
